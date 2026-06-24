@@ -1,0 +1,38 @@
+{
+  "cpu": {
+    "arch": "arm64",
+    "cores_logical": 10,
+    "model": "Apple M5",
+    "cores_physical": 10,
+    "apple_silicon": true
+  },
+  "ram_gb": 16.0,
+  "gpu": {
+    "backends": {
+      "nvidia_cuda": false,
+      "amd_rocm": false,
+      "apple_metal": true,
+      "vulkan": false,
+      "cpu_only": false
+    },
+    "details": {
+      "apple_metal": "Apple Silicon"
+    }
+  },
+  "docker": {
+    "docker": true,
+    "compose": true
+  },
+  "recommendation": {
+    "recommended_paths": [
+      "01-llama-cpp-quickstart",
+      "02-llama-cpp-server",
+      "03-milestone-integration",
+      "BONUS-llama-cpp-optimization",
+      "BONUS-mlx-macos"
+    ],
+    "recommended_model": "TinyLlama-1.1B (Q4_K_M)",
+    "llama_cpp_backend": "Metal",
+    "llama_cpp_cmake_flag": "-DGGML_METAL=on"
+  }
+}
